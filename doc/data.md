@@ -19,8 +19,10 @@
 | manager           | 基金经理      | `string` | JJJL            |                   |
 | estabDate         | 成立日期      | `string` | ESTABDATE       |                   |
 | subject           | 主题        | `string` | TTYPENAME       |                   |
-| redeem            | 赎回状态      | `string` | SHZT/ ISSALES   | 可卖状态, 1: 可卖       |
-| purchase          | 申购状态      | `string` | SGZT/ ISBUY     | 可买状态, 2: 可买       |
+| redeem            | 赎回状态      | `string` | ISSALES         | 可卖状态, 1: 可卖       |
+| redeemDesc        | 赎回描述      | `string` | SHZT            | 开放赎回              |
+| purchase          | 申购状态      | `string` | ISBUY           | 可买状态, 2: 可买       |
+| purchaseDesc      | 申购描述      | `string` | SGZT            | 限大额               |
 | sourceRate        | 原始购买费率    | `string` | SOURCERATE      |                   |
 | rate              | 购买费率      | `string` | RATE            |                   |
 | minPurchase       | 最低申购额     | `number` | MINSG           |                   |
@@ -28,9 +30,9 @@
 | regular           | 定投状态      | `string` | DTZT            | 可定投状态, 1: 可定投     |
 | minRegular        | 定投起点      | `number` | MINDT           |                   |
 | isNew             | 新发行基金？    | `string` | ISNEW           | 0: false, 1: true |
-| profitWeek        | 近1周       |          |                 |                   |
-| profitMonth       | 近1月       |          |                 |                   |
-| profit3Month      | 近3月       |          |                 |                   |
+| profitWeek        | 近1周       |          | SYL_Z           |                   |
+| profitMonth       | 近1月       |          | SYL_Y           |                   |
+| profit3Month      | 近3月       |          | SYL_3Y          |                   |
 | profit6Month      | 近6月       |          |                 |                   |
 | profitYear        | 近1年       |          |                 |                   |
 | profit2Year       | 近2年       |          |                 |                   |

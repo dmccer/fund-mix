@@ -13,7 +13,12 @@ exports.headers = {
   'User-Agent': `app-iphone-client-iPhone9,1-${params.deviceid}`
 };
 const dataDir = exports.dataDir = path.join(process.cwd(), 'data');
+const transformedDataDir = exports.transformedDataDir = path.join(dataDir, 'transformed');
 
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir);
+}
+
+if (!fs.existsSync(transformedDataDir)) {
+  fs.mkdirSync(transformedDataDir);
 }

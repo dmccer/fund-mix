@@ -44,5 +44,5 @@ class ListCrawler extends Crawler {
 
 module.exports = new ListCrawler({
   path: '/FundMApi/FundRankNewList.ashx',
-  dataFile: `fund_list_${new Date().toLocaleDateString}.json`
+  dataFile: `fund_list_${new Date().toLocaleDateString()}.json`
 });

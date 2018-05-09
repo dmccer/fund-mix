@@ -15,5 +15,5 @@ class BasicCrawler extends Crawler {
 
 module.exports = new BasicCrawler({
   path: '/FundMApi/FundBasicInformation.ashx',
-  dataFile: `fund_basic_${new Date().toLocaleDateString}.json`
+  dataFile: `fund_basic_${new Date().toLocaleDateString()}.json`
 });

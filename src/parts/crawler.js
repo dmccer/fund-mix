@@ -10,7 +10,7 @@ const conf = require('./conf');
 class Crawler {
   constructor(opt) {
     this.apiUrl = new URL(opt.path, conf.root).toString();
-    this.dataFile = opt.dataFile;
+    this.dataFile = path.join(conf.dataDir, opt.dataFile);
     this.qsize = opt.qsize || 0;
     this.qopt = opt.qopt || { concurrent: 30 };
     this.defaultParams = { ...conf.params };
@@ -65,7 +65,7 @@ class Crawler {
   }
 
   storage(data) {
-    fs.writeFileSync(path.join(conf.dataDir, this.dataFile), JSON.stringify(data));
+    fs.writeFileSync(this.dataFile, JSON.stringify(data));
   }
 
   /**
