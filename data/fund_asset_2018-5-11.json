@@ -1,0 +1,33 @@
+[{
+  "code": "005630",
+  "holdings": 1023.79,
+  "cost": 1000,
+  "name": "华安研究精选混合",
+  "netDate": "2018-05-10",
+  "net": "0.9999",
+  "range": "0.28",
+  "sourceRate": "1.50%",
+  "rate": "0.15%",
+  "profit": "23.687621",
+  "lastProfit": "2.8663253388",
+  "valuation": "0.9983",
+  "valuationRange": "-0.16",
+  "valuationTime": "2018-05-11 15:00",
+  "valuationRangeAmount": "-0.0016"
+}, {
+  "code": "005237",
+  "holdings": 5000,
+  "cost": 5000,
+  "name": "银华医疗健康量化优选A",
+  "netDate": "2018-05-10",
+  "net": "1.1581",
+  "range": "1.89",
+  "sourceRate": "1.50%",
+  "rate": "0.15%",
+  "profit": "790.5",
+  "lastProfit": "109.44045",
+  "valuation": "1.1399",
+  "valuationRange": "-1.57",
+  "valuationTime": "2018-05-11 15:00",
+  "valuationRangeAmount": "-0.0182"
+}]

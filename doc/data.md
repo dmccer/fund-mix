@@ -4,7 +4,7 @@
 
 | 字段名               | 描述        | 类型       | 天天基金字段          | 备注                |
 | ----------------- | --------- | -------- | --------------- | ----------------- |
-| name              | 基金名称      | `string` | SHORTNAME       | 银华医疗健康量化优选A       |
+| name              | 基金简称      | `string` | SHORTNAME       | 银华医疗健康量化优选A       |
 | fullname          | 全称        | `string` |                 |                   |
 | code              | 基金代码      | `string` | FCODE           | 005237            |
 | type              | 基金类型      | `string` | FTYPE/ FUNDTYPE | 001：股票型           |
@@ -40,17 +40,21 @@
 | profit5Year       | 近5年       |          |                 |                   |
 | profitThisYear    | 今年来       |          |                 |                   |
 | profitEstablished | 成立来       |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
-|                   |           |          |                 |                   |
+
+### 持仓
+
+| 字段名        | 描述     | 类型       | 备注      |
+| ---------- | ------ | -------- | ------- |
+| code       | 基金代码   | `string` |         |
+| name       | 基金简称   | `string` |         |
+| netDate    | 净值日期   | `string` |         |
+| net        | 净值     | `number` |         |
+| range      | 日涨跌幅   | `number` | 百分比     |
+| profit     | 持仓盈亏   | `number` | 具体值，单位元 |
+| lastProfit | 日收益    | `number` | 具体值，单位元 |
+| holdings   | 持有份额   | `number` |         |
+| cost       | 总买入成本  | `number` |         |
+| sourceRate | 原始申购费率 | `number` |         |
+| rate       | 申购费率   | `number` |         |
+|            |        |          |         |
 

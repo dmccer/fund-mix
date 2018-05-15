@@ -3,7 +3,11 @@ const path = require('path');
 const conf = require('../parts/conf');
 const logger = require('../lib/logger');
 
-module.exports = function transform(jsonFilename) {
+const getFilename = exports.getFilename = function() {
+  return path.join(conf.transformedDataDir, `fund_basic_${new Date().toLocaleDateString()}.json`);
+}
+
+exports.transform = function(jsonFilename) {
   if (!fs.existsSync(jsonFilename)) {
     logger.warn(`没有找到需要转换的 json 文件: ${jsonFilename}`);
     return;
@@ -52,6 +56,8 @@ module.exports = function transform(jsonFilename) {
     }
   });
 
-  fs.writeFileSync(path.join(conf.transformedDataDir, `fund_basic_${new Date().toLocaleDateString()}.json`), JSON.stringify(ret));
+  fs.writeFileSync(getFilename(), JSON.stringify(ret));
   logger.info('basic 转换成功');
 }
+
+
