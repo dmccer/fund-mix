@@ -1,13 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const logger = require('./lib/logger');
-const listCrawler = require('./parts/list');
-const basicCrawler = require('./parts/basic');
-const assetCrawler = require('./parts/asset');
-const basicTransform = require('./transform/basic');
-const Asset = require('./biz/asset');
-const conf = require('./parts/conf');
+const logger = require("./lib/logger");
+const listCrawler = require("./parts/list");
+const basicCrawler = require("./parts/basic");
+const assetCrawler = require("./parts/asset");
+const basicTransform = require("./transform/basic");
+const Asset = require("./biz/asset");
+const conf = require("./parts/conf");
 
 /**
  * 交易日每天更新
@@ -23,15 +23,13 @@ async function crawlFundBasicInfo() {
  * 录入持仓，交易日每天更新
  */
 function inputPosition() {
-  const input = [{
-    code: '005630',
-    holdings: 1023.79,
-    cost: 1000
-  }, {
-    code: '005237',
-    holdings: 5000,
-    cost: 5000
-  }];
+  const input = [
+    {
+      code: "161631",
+      holdings: 1000,
+      cost: 1000
+    }
+  ];
 
   Asset.input(input);
 }
@@ -41,7 +39,7 @@ function inputPosition() {
  */
 async function fundAssetRangeWarn() {
   const fundAssetsFile = path.join(conf.transformedDataDir, `fund_asset.json`);
-  
+
   delete require.cache[fundAssetsFile];
   const fundAssets = require(fundAssetsFile);
 
@@ -51,4 +49,10 @@ async function fundAssetRangeWarn() {
   console.log(result);
 }
 
-fundAssetRangeWarn();
+async function start() {
+  // await crawlFundBasicInfo();
+  inputPosition();
+  await fundAssetRangeWarn();
+}
+
+start();

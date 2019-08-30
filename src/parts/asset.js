@@ -1,4 +1,4 @@
-const Crawler = require('./crawler');
+const Crawler = require("./crawler");
 
 class AssetCrawler extends Crawler {
   transformInput(input) {
@@ -23,13 +23,13 @@ class AssetCrawler extends Crawler {
 
   start(funds) {
     this.funds = funds;
-    this.qsize = funds && funds.length || 0;
+    this.qsize = (funds && funds.length) || 0;
 
     return super.start();
   }
 }
 
 module.exports = new AssetCrawler({
-  path: '/FundMApi/FundVarietieValuationDetail.ashx',
+  path: "/FundMApi/FundVarietieValuationDetail.ashx",
   dataFile: `fund_asset_${new Date().toLocaleDateString()}.json`
 });
